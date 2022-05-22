@@ -5,7 +5,7 @@ resource "linode_firewall" "jenkins-firewall" {
     label    = "allow-ssh"
     action   = "ACCEPT"
     protocol = "TCP"
-    ports    = "22"
+    ports    = "22,8090"
     ipv4     = var.jenkins_addr_whitelist
   }
 
