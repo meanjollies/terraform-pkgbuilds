@@ -4,6 +4,7 @@ resource "linode_instance" "jenkins-controller" {
   region          = var.region
   type            = var.jenkins_controller_type
   authorized_keys = [var.authorized_keys]
+  tags            = ["AUR"]
 }
 
 resource "linode_instance" "jenkins-agents" {
@@ -13,4 +14,5 @@ resource "linode_instance" "jenkins-agents" {
   region          = var.region
   type            = var.jenkins_agent_type
   authorized_keys = [var.authorized_keys]
+  tags            = ["AUR"]
 }
